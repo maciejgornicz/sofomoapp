@@ -2,7 +2,9 @@ version: '3'
 
 services: 
   sofomoapp:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile-local
     volumes:
       - .:/opt/apps/sofomoapp/src
     networks: 
@@ -11,7 +13,7 @@ services:
     depends_on: 
       - dbservice
   nginx:
-    image: nginx:1.15
+    image: nginx:latest
     ports:
       - 8000:80
     volumes:
@@ -22,7 +24,7 @@ services:
       - nginx_network
     
   dbservice:
-    image: postgres:12.5
+    image: postgres:latest
     env_file:
       - config/db/dbservice_env
     volumes: 

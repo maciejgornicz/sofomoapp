@@ -25,7 +25,7 @@ SECRET_KEY = 's7snkyxg^5of@%g84$!1*!limy_h8%hw(!t$i@gy9=#jk23+rg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'mg-sofomoapp.herokuapp.com']
 
 
 # Application definition
@@ -122,3 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
