@@ -1,1 +1,1 @@
-web: gunicorn sofomoapp.wsgi
+web: gunicorn --chdir sofomoapp sofomoapp.wsgi
