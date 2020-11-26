@@ -12,12 +12,14 @@ services:
       - dbservice_network
     depends_on: 
       - dbservice
+
   nginx:
     image: nginx:latest
     ports:
       - 8000:80
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
+      - .:/opt/apps/sofomoapp/src
     depends_on:
       - sofomoapp
     networks: 
