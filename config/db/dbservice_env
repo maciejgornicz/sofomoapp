@@ -1,0 +1,3 @@
+POSTGRES_USER=sofomoapp_user
+POSTGRES_PASSWORD=sofomoapp_pass
+POSTGRES_DB=sofomoapp_db

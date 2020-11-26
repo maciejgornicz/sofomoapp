@@ -1,0 +1,40 @@
+version: '3'
+
+services: 
+  sofomoapp:
+    build: .
+    volumes:
+      - .:/opt/apps/sofomoapp/src
+    networks: 
+      - nginx_network
+      - dbservice_network
+    depends_on: 
+      - dbservice
+  nginx:
+    image: nginx:1.15
+    ports:
+      - 8000:80
+    volumes:
+      - ./config/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - sofomoapp
+    networks: 
+      - nginx_network
+    
+  dbservice:
+    image: postgres:12.5
+    env_file:
+      - config/db/dbservice_env
+    volumes: 
+      - dbservice_volume:/var/lib/postgresql/data
+    networks: 
+      - dbservice_network
+
+networks:
+  dbservice_network:
+    driver: bridge
+  nginx_network:
+    driver: bridge
+
+volumes:
+  dbservice_volume:
