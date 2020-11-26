@@ -13,7 +13,7 @@ RUN apk update \
 
 COPY . /opt/apps/sofomoapp/src
 RUN pip install -r requirements.txt
-#EXPOSE 8000
+EXPOSE 8000
 CMD ["gunicorn", "--chdir", "sofomoapp", "--bind", ":8000", "sofomoapp.wsgi:application"]
 
 
