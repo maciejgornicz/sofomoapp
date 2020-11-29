@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'coreapi',
+    'core',
     'account',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
 import dj_database_url
@@ -148,3 +150,18 @@ DATABASES['default']['CONN_MAX_AGE'] = 500
 
 GEOIP_URL = 'http://api.ipstack.com'
 GEOIP_TOKEN = 'd77ec905fd349a2d755ce69d3c1e7a14'
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'api_key': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization'
+        }
+    },
+    'USE_SESSION_AUTH': False
+}
+
+REDOC_SETTINGS = {
+   'LAZY_RENDERING': True,
+}

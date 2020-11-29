@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from rest_framework.exceptions import APIException
-from coreapi import models
-from coreapi import services
+from core import models
+from core import services
 
 class IPGeoEntrySerializer(serializers.ModelSerializer):
     def to_internal_value(self, data):
