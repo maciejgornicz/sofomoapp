@@ -24,3 +24,7 @@ class IPGeoEntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = models.IpGeoEntry
         fields = ['id','host', 'latitude', 'longitude']
+        extra_kwargs = {
+            'latitude':{'read_only': True},
+            'longitude':{'read_only': True},
+        }
