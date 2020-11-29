@@ -12,6 +12,7 @@ services:
       - dbservice_network
     depends_on: 
       - dbservice
+    command: sh -c "sofomoapp/manage.py migrate && sofomoapp/manage.py collectstatic --noinput && gunicorn --chdir sofomoapp --bind :8000 sofomoapp.wsgi:application"
 
   nginx:
     image: nginx:latest
