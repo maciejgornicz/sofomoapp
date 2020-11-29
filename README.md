@@ -65,6 +65,8 @@ App is deployed on https://mg-sofomoapp.herokuapp.com and this repo contains doc
 - http://localhost/swagger/
 - http://localhost/redoc/
 
+## TODO:
+1. Add React Frontend (Started at frontend branch. I'm still React rookie).
 
 ## Source 
 
