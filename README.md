@@ -29,6 +29,8 @@ App is deployed on https://mg-sofomoapp.herokuapp.com and this repo contains doc
 3. run `cd sofomoapp && decker-compose up --build`
 4. Use at http://localhost/
 
+> **_NOTE:_**  Notice that App will start on port 80.
+
 ## Usage
 1. To register your user use endpoint `account/api/register/` with POST method:
         
@@ -70,5 +72,5 @@ https://medium.com/python-in-plain-english/django-rest-framework-jwt-auth-with-l
 2. IP Geolocation service:
 https://ipstack.com/
 
-3. App desployed on:
+3. App deployed on:
 https://heroku.com/
