@@ -3,10 +3,7 @@ import requests
 import ipaddress
 
 def geolocate_ip(ip):
-    ipaddress.ip_address(ip)
+    #ipaddress.ip_address(ip)
     url = '{}/{}?access_key={}'.format(settings.GEOIP_URL,ip,settings.GEOIP_TOKEN)
-    try:
-        res = requests.post(url)
-    except:
-        raise Exception("Service temporarily unavailable")
+    res = requests.post(url)
     return res.json()

@@ -6,7 +6,7 @@ class IpGeoEntry(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    ip_address = models.GenericIPAddressField(verbose_name="IP Address", unique=True)
+    host = models.CharField(max_length=100,verbose_name="Host", unique=True)
     latitude = models.FloatField(verbose_name="Latitude")
     longitude = models.FloatField(verbose_name="Longitude")
 
