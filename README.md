@@ -44,14 +44,15 @@ This project was created to meet the Python Developer recruitment requirements a
         }
 
  3. From now on add this header to all API requests:
+        
         {"Authorization": "Bearer <your JWT Token>"}
 
 
 ## API Documentation:
-https://mg-sofomoapp.herokuapp.com/swagger/
-https://mg-sofomoapp.herokuapp.com/redoc/
+- https://mg-sofomoapp.herokuapp.com/swagger/
+- https://mg-sofomoapp.herokuapp.com/redoc/
 ### or (locally)
-http://localhost/swagger/
-http://localhost/redoc/
+- http://localhost/swagger/
+- http://localhost/redoc/
 
 
