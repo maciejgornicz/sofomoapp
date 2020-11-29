@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 's7snkyxg^5of@%g84$!1*!limy_h8%hw(!t$i@gy9=#jk23+rg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'mg-sofomoapp.herokuapp.com']
 
