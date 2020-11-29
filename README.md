@@ -7,14 +7,17 @@
 
 ## General info
 This project was created to meet the Python Developer recruitment requirements at Sofomo.
+App is deployed on https://mg-sofomoapp.herokuapp.com and this repo contains dockerized app do run locally.
 
 ## Technologies
 - API: Django framework with Django Rest Framework
 - Database: Postgresql
 - Nginx
+- Gunicorn
 - Swagger/Redoc
 - Docker Compose
-- Heroku (deployed)
+- heroku.com
+- ipstack.com
 
 ## Setup
 
@@ -49,10 +52,23 @@ This project was created to meet the Python Developer recruitment requirements a
 
 
 ## API Documentation:
+
 - https://mg-sofomoapp.herokuapp.com/swagger/
 - https://mg-sofomoapp.herokuapp.com/redoc/
+
 ### or (locally)
+
 - http://localhost/swagger/
 - http://localhost/redoc/
 
 
+## Source 
+
+1. Registration endpoint inspired by:
+https://medium.com/python-in-plain-english/django-rest-framework-jwt-auth-with-login-and-register-77f830cd8789
+
+2. IP Geolocation service:
+https://ipstack.com/
+
+3. App desployed on:
+https://heroku.com/
