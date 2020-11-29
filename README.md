@@ -26,7 +26,9 @@ App is deployed on https://mg-sofomoapp.herokuapp.com and this repo contains doc
 
 ### Installation
 1. Clone this repo
-3. run `cd sofomoapp && decker-compose up --build`
+3. run 
+
+        cd sofomoapp && decker-compose up --build
 4. Use at http://localhost/
 
 > **_NOTE:_**  Notice that App will start on port 80.
