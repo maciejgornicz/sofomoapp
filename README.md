@@ -28,12 +28,13 @@ This project was created to meet the Python Developer recruitment requirements a
 
 ## Usage
 1. To register your user use endpoint `account/api/register/` with:
-    {
-        "username": "<string>",
-        "password": "<string>",
-        "first_name": "<string>",
-        "last_name": "<string>"
-    }
+        
+        {
+            "username": "<string>",
+            "password": "<string>",
+            "first_name": "<string>",
+            "last_name": "<string>"
+        }
 
 ## API Documentation:
 https://mg-sofomoapp.herokuapp.com/swagger/
