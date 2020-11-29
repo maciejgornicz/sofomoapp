@@ -2,9 +2,9 @@ from django.conf import settings
 import requests
 import ipaddress
 
-def get_ip_geolocalization(ip):
+def geolocate_ip(ip):
     ipaddress.ip_address(ip)
-    url = '{}test/{}?access_key={}'.format(settings.GEOIP_URL,ip,settings.GEOIP_TOKEN)
+    url = '{}/{}?access_key={}'.format(settings.GEOIP_URL,ip,settings.GEOIP_TOKEN)
     try:
         res = requests.post(url)
     except:
